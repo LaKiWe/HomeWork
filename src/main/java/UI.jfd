@@ -1,0 +1,116 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {comp selectPanel:::p::p, space :::p, comp Cardpanel:::::x}}"
+			"$verticalGroup": "par l {comp selectPanel::l:::x, seq t {space :::p, comp Cardpanel:::::x}}"
+		} ) {
+			name: "mainFrame"
+			"title": "SocketMail"
+			"background": new java.awt.Color( 253, 250, 246, 255 )
+			"$sizePolicy": 1
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l:::p {comp Send_Btn:::p:75:p, comp Recv_Page::::0:x, comp Maillist:::::x}, space :p:6:p}}"
+				"$verticalGroup": "par l {seq l {space :p:26:p, comp Send_Btn:::p::p, space s:::p, comp Recv_Page:::p::p, space :p:112:p, comp Maillist:::::x, space :::p}}"
+			} ) {
+				name: "selectPanel"
+				"background": new java.awt.Color( 6, 68, 32, 255 )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "Send_Btn"
+					"text": "Send_Page"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "Send_BtnMouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "Recv_Page"
+					"text": "Recv_Page"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "Recv_PageMouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "Maillist"
+					"background": new java.awt.Color( 0, 0, 0, 0 )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+				name: "Cardpanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq t {comp scrollPane2::::484:x, space :::p}}"
+					"$verticalGroup": "par l {comp scrollPane2::l::432:x}"
+				} ) {
+					name: "panel2"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea1"
+							"background": new java.awt.Color( 250, 241, 230, 255 )
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card2"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {comp settingPanel:::::x, comp scrollPane1:::::x}, space :::p}}"
+					"$verticalGroup": "par l {seq t {comp settingPanel:::::x, space :::p, comp scrollPane1:::p:242:p, space :::p}}"
+				} ) {
+					name: "panel1"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JEditorPane" ) {
+							name: "editorPane1"
+							"background": new java.awt.Color( 250, 241, 230, 255 )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq t {space :p:22:p, par l {comp label4:::p::p, comp label3:::p::p, comp label1:::p::p}, space :p:18:p, par l {seq {comp textField1:::p:224:p, space :::x, comp Btn_send:::p::p}, comp comboBox1::t:::x, seq t {comp textField2:::p:119:p, space :::x, comp label2:::p:67:p, space :::p, comp passwordField1:::p:123:p}}, space :p:22:p}}"
+						"$verticalGroup": "par l {seq {space ::49:x, par b {comp label4::b:p::p, comp comboBox1::b:p:30:p}, space :::p, par b {comp label3::b:p::p, comp passwordField1::b:p::p, comp label2::b:p::p, comp textField2::b:p::p}, space :::p, par b {comp label1::b:p::p, comp textField1::b:p::p, comp Btn_send::b:p::p}, space :p:25:p}}"
+					} ) {
+						name: "settingPanel"
+						"background": new java.awt.Color( 228, 239, 231, 255 )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "Btn_send"
+							"text": "Send"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "SendTo: "
+							"foreground": new java.awt.Color( 6, 68, 32, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "passwordField1"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": "Password: "
+							"foreground": new java.awt.Color( 6, 68, 32, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "Account: "
+							"foreground": new java.awt.Color( 6, 68, 32, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox1"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label4"
+							"text": "MailBox"
+							"foreground": new java.awt.Color( 6, 68, 32, 255 )
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card1"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 70 )
+			"size": new java.awt.Dimension( 585, 470 )
+		} )
+	}
+}
